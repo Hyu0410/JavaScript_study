@@ -69,3 +69,55 @@ for(let i = 0 ; i < 10 ; i++){
 }
 console.log(output); //p.144
 
+console.log("-----------");
+
+let count = "";
+for(let i = 0 ; i < 10 ; i++){
+    for(let j = 0 ; j <= i ; j++){
+        count += "*";
+    }
+    console.log(count);
+    count = "";
+}
+
+console.log("-----------");
+
+let count_2 = "";
+for(let i = 0 ; i < 10 ; i++){
+    for(let j = 0 ; j < 10 - i ; j++){
+        count_2 += " ";
+    }
+    for(let j = 0 ; j < i + 1 ; j++){
+        count_2 += "*";
+    }
+    console.log(count_2);
+    count_2 = "";
+}
+
+//짝수 찾으면 break로 반복문 벗어남
+console.log("짝수 찾으면 break로 루프 벗어남");
+
+i = 0;
+let Array = [1, 31, 273, 57, 8, 11, 32];
+
+while(true){
+    if(Array[i] % 2 == 0){
+        console.log(`처음 발견한 짝수: ${Array[i]}`);
+        break;
+    }
+    i++;
+}
+
+//continue: 현재 반복 멈추고 다음 반복 진행
+console.log("continue");
+Array_2 = [];
+for(let i = 0 ; i < 10 ; i++){
+    Array_2[i] = i + 1;
+}
+for(let i = 0 ; i < 10 ; i++){
+    if(Array_2[i] % 2 == 0){
+        continue;
+    }
+    console.log(Array_2[i]);
+}
+
