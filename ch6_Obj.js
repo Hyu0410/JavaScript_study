@@ -73,4 +73,32 @@ let Obj_1 = [
     }}
 ]
 
+function printObj(Obj_1) {
+    console.log(`${Obj_1.name}의 가격은 ${Obj_1.price}원 입니다`);
+}
 
+for(let i = 0 ; i < 6 ; i++){
+    printObj(Obj_1[i]);
+}
+
+console.log("---------");
+
+class Product{
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+    }
+    print(){
+        console.log(`${this.name}의 가격은 ${this.price}원 입니다`);
+    }
+}
+
+let product_2 = [
+    new Product("바나나", 1200),
+    new Product("사과", 2000),
+    new Product("배", 3000)
+]
+
+for(let i = 0 ; i < 3 ; i++){
+    product_2[i].print();
+}
